@@ -1,0 +1,219 @@
+.food-detail-wrapper{
+  position: fixed;
+  left: 0;
+  bottom: 48px;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  transition: all 0.4s ease;
+  &.move-enter-active,&.move-leave-active{
+    transform: translate3d(0,0,0);
+  }
+  &.move-enter,&.move-leave-active{
+    transform: translate3d(100%,0,0);
+  }
+  .foodDetail{
+    .back{
+      position: absolute;
+      color: #fff;
+      top: 12px;
+      left: 6px;
+      font-size: 20px;
+      padding: 10px;
+    }
+    .info{
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 18px;
+      .title{
+        font-size: 14px;
+        font-weight: 700;
+        color: #07111b;
+        line-height: 14px;
+      }
+      .desc{
+        display: flex;
+        padding: 0;
+        padding-top: 8px;
+        font-size: 10px;
+        color: #93999f;
+        line-height: 10px;
+        span:last-child{
+          padding-left: 12px;
+        }
+      }
+      .price{
+        display: flex;
+        padding-top: 18px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #f01414;
+        line-height: 24px;
+        .unit{
+          font-size: 10px;
+          font-weight: normal;
+        }
+        .oldPrice{
+          padding-left: 12px;
+          font-size: 10px;
+          font-weight: normal;
+          color: #93999f;
+          line-height: 24px;
+        }
+      }
+      .shopCart{
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        height: 24px;
+        text-align: center;
+        z-index: 2;
+        .text{
+          box-sizing: border-box;
+          height: 100%;
+          padding: 0 12px;
+          line-height: 24px;
+          color: #fff;
+          font-size: 10px;
+          background: #00a0dc;
+          border-radius: 12px;
+          &.fade-enter-active,&.fade-leave-active{
+            transition: opacity 0.2s;
+          }
+          &.fade-enter,&.fade-leave-active{
+            opacity: 0;
+          }
+        }
+      }
+      .cartControl{
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+    .split{   /*学学！！*/
+      height: 16px;
+      width: 100%;
+      background: #f3f5f7;
+      border-top: 1px solid rgba(7,17,27,0.1);
+      border-bottom: 1px solid rgba(7,17,27,0.1);
+    }
+    .desc{
+      padding: 18px;
+      .title{
+        margin-bottom: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #07111b;
+      }
+      .content{
+        padding: 0 8px;
+        font-size: 12px;
+        font-weight: 200;
+        color: #4d555d;
+        line-height: 24px;
+      }
+    }
+    .ratings{
+      padding: 18px 0;
+      position: relative;
+      .title{
+        padding-left: 18px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #07111b;
+      }
+      .classify{
+        padding: 18px 0;
+        margin: 0 18px;
+        border-bottom: 1px solid rgba(7,17,27,0.1);
+        .item{
+          display: inline-block;
+          margin-right: 8px;
+          font-size: 12px;
+          padding: 8px 12px;
+          line-height: 16px;
+          background: rgba(0,160,220,0.2);
+          color: #4d555f;
+          &.active{
+            color:#fff;
+            background: #00a9dc;
+          }
+          &.bad{
+            background: rgba(77,85,93,0.2)
+          }
+          &.badActive{
+            background: #4d555d;
+          }
+          .count{
+            font-size: 8px;
+            padding-left: 2px;
+          }
+        }
+      }
+      .switch{
+        padding: 12px 0 12px 18px;
+        width: 100%;
+        font-size: 12px;
+        color: #93999f;
+        border-bottom: 1px solid rgba(7,17,27,0.1);
+        .icon-check_circle{
+          font-size: 24px;
+          vertical-align: middle;
+          &.on{
+            color: #00c850;
+          }
+        }
+        .text{
+
+        }
+      }
+      .evel-list{
+        margin: 0 18px;
+        .evel{
+          padding: 16px 0;
+          border-bottom: 1px solid rgba(7,17,27,0.1);
+          .userInfo{
+            display: flex;
+            color: #93999f;
+            font-size: 10px;
+            line-height: 12px;
+            .time{
+              flex: 1;
+            }
+            .user{
+              flex: 1;
+              text-align: right; /*机智，防止名字太长*/
+              .avatar{
+                img{
+                  padding-left: 6px;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+          .content{
+            padding-top: 6px;
+            .icon{
+              font-size: 12px;
+              line-height: 24px;
+              &.icon-thumb_down{
+                color: #93999f;
+              }
+              &.icon-thumb_up{
+                color: rgb(0,160,220);
+              }
+            }
+            .text{
+              padding-left: 4px;
+              font-size: 12px;
+              color: #07111b;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

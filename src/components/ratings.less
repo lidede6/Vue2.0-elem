@@ -1,0 +1,185 @@
+.ratingsWrapper{
+  position: absolute;
+  top: 174px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  .info{
+    display: flex;
+    .mark{
+      flex: 0 0 138px;
+      margin: 18px 0;
+      border-right: 1px solid rgba(7,17,27,0.1);
+      text-align: center;
+      .num{
+        font-size: 24px;
+        color: #f90;
+        line-height: 28px;
+      }
+      .text{
+        padding: 6px 0 8px 0;
+        font-size: 12px;
+        color: #07111b;
+        line-height: 12px;
+      }
+      .contrast{
+        margin-bottom: 6px;
+        font-size: 10px;
+        color: #07111b;
+        line-height: 10px;
+      }
+    }
+    .stars{
+      padding: 18px 20px;
+      .serviceScore,.foodScore,.deliveryTime{
+        display: flex;
+        margin-bottom: 8px;
+        .text{
+          margin-right: 12px;
+          color: #07111b;
+          font-size: 12px;
+          line-height: 18px;
+        }
+        .num{
+          padding-left: 12px;
+          font-size: 12px;
+          line-height: 18px;
+          color: #f90;
+        }
+      }
+      .deliveryTime{
+        margin-bottom: 0;
+        .time{
+          font-size: 12px;
+          color: #93999f;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  .split{   /*学学！！*/
+    height: 16px;
+    width: 100%;
+    background: #f3f5f7;
+    border-top: 1px solid rgba(7,17,27,0.1);
+    border-bottom: 1px solid rgba(7,17,27,0.1);
+  }
+  .ratings{
+    padding: 18px 0;
+    position: relative;
+    .classify{
+      padding-bottom: 18px;
+      margin: 0 18px;
+      border-bottom: 1px solid rgba(7,17,27,0.1);
+      .item {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 12px;
+        padding: 8px 12px;
+        line-height: 16px;
+        background: rgba(0, 160, 220, 0.2);
+        color: #4d555f;
+        &.active {
+          color: #fff;
+          background: #00a9dc;
+        }
+        &.bad {
+          background: rgba(77, 85, 93, 0.2)
+        }
+        &.badActive {
+          background: #4d555d;
+        }
+        .count {
+          font-size: 8px;
+          padding-left: 2px;
+        }
+      }
+    }
+    .switch{
+      padding: 12px 0 12px 18px;
+      width: 100%;
+      font-size: 12px;
+      color: #93999f;
+      border-bottom: 1px solid rgba(7,17,27,0.1);
+      .icon-check_circle{
+        font-size: 24px;
+        vertical-align: middle;
+        &.on{
+          color: #00c850;
+        }
+      }
+      .text{
+
+      }
+    }
+    .evel-list {
+      margin: 0 18px;
+
+      .evel {
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+        display: flex;
+        .avatar{
+          flex: 0 0 28px;
+          margin-right: 12px;
+          img{
+            border-radius: 50%;
+          }
+        }
+        .content{
+          flex: 1;
+          .user{
+            font-size: 10px;
+            color: #07111b;
+            line-height: 12px;
+            .rateTime{
+              position: absolute;
+              right: 18px;
+              font-weight: 200;
+              color: #93999f;
+            }
+          }
+          .star-wrapper{
+            margin-bottom: 6px;
+            padding-top: 4px;
+            font-size: 0;
+            .star{
+              display: inline-block;
+            }
+            .deliveryTime{
+              padding-left: 6px;
+              font-size: 10px;
+              font-weight: 200;
+              color: #93999f;
+            }
+          }
+          .text{
+            font-size: 12px;
+            color: #07111b;
+            line-height: 18px;
+          }
+          .recommend{
+            padding-top: 4px;
+            .icon{
+              font-size: 12px;
+              color: #00a0dc;
+              line-height: 16px;
+            }
+            .dish{
+              display: inline-block;
+              margin-right: 8px;
+              margin-top: 4px;
+              padding: 2px 6px;
+              color: #93999f;
+              font-size: 9px;
+              line-height: 16px;
+              white-space: normal;
+              border: 1px solid rgba(7, 17, 27, 0.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

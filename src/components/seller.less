@@ -1,0 +1,179 @@
+.seller{
+  position: absolute;
+  top: 174px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+
+  .overview{
+    padding: 18px;
+
+    .title {
+      color: #07111b;
+      font-size: 14px;
+      margin-bottom: 8px;
+      line-height: 14px;
+
+    }
+    .desc {
+      display: inline-block;
+
+
+      .star {
+        display: inline-block;
+      }
+
+      .text {
+        display: inline-block;
+        font-size: 5px;
+        color: #4d555d;
+        line-height: 20px;
+        vertical-align: center;
+      }
+    }
+    .favorite{
+      position: absolute;
+      top: 18px;
+      right: 8px;
+      width: 50px;
+      text-align: center;
+
+      .icon-favorite{
+        width: 24px;
+        line-height: 24px;
+        color: #d4d6d9;
+        font-size:25px;
+        padding-left:3px;
+        padding-top:5px;
+        display: inline-block;
+      }
+      .text{
+        font-size:14px;
+        width: 50px;
+        display: inline-block;
+      }
+      .active{
+        color: rgb(240,20,20);
+      }
+    }
+  }
+}
+.title-wrap{
+  border-bottom: 1px solid #ccc;
+  padding-bottom:18px;
+  padding-left: 10px;
+}
+.remark{
+  display: flex;
+  list-style-type: none;
+  //background: cyan;
+
+
+  .block{
+    flex: 1;
+    margin-top: 12px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+
+    &:last-child{
+      border-right: none;
+  }
+    h1 {
+      font-size: 12px;
+      color: #ccc;
+      line-height: 24px;
+    }
+    .content{
+
+      .stress{
+        font-size: 16px;
+      }
+  }
+  }
+}
+.split{
+  height:16px;
+  width: 100%;
+  background: #f3f5f7;
+  border-top: 1px solid rgba(7,17,27,0.1);
+  border-top: 1px solid rgba(7,17,27,0.1);
+
+}
+.acticities{
+  padding-top: 18px;
+
+  .bulletin{
+    margin: 0 18px;
+    border-bottom: 1px solid rgba(7,17,27,0.1);
+
+    h1{
+      font-size:12px;
+      line-height: 24px;
+    }
+    .bulletin-text{
+      color: red;
+      font-size:12px;
+      line-height: 24px;
+      padding:8px 12px 16px 12px;
+    }
+  }
+  .supports{
+    margin: 0 18px;
+    .item{
+      padding: 16px;
+      border-bottom: 1px solid rgba(7,17,27,0.1);
+      font-size: 0;
+      &:last-child{
+        border: none;
+      }
+      .iconMap{
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+      .text{
+        line-height:16px;
+        font-size:12px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.pics{
+  margin:18px;
+  white-space: nowrap;
+  overflow: hidden;
+  h1{
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 12px;
+  }
+  .picList{
+    overflow: hidden;
+    img{
+      margin-right: 6px;
+    }
+  }
+
+}
+.infos{
+  padding: 18px;
+  h1{
+    font-size:20px;
+    line-height:30px;
+    padding-bottom: 10px;
+  }
+  .info-list{
+
+    .info{
+      border-top: 1px solid #ccc;
+      line-height:16px;
+      vertical-align: middle;
+      padding: 16px 10px;
+      font-size:12px;
+
+    }
+  }
+}

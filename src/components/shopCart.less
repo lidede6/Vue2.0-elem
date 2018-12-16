@@ -1,0 +1,181 @@
+.shopCart{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 50;
+  .content{
+    display: flex;
+    background: #141d27;
+    .content-left{
+      flex:1;
+      height:48px;
+      .logo-wrapper{
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        padding: 6px;
+        width: 56px;
+        height:56px;
+        line-height: 56px;
+        top: -10px;
+        background: #141d27;
+        margin: 0 12px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        text-align: center;
+
+        .badge{
+          position: absolute;
+          top:0;
+          right: 0;
+          background: #f01414;
+          color: #fff;
+          width: 24px;
+          height: 16px;
+          line-height: 16px;
+          font-size: 9px;
+          font-weight: 700;
+          border-radius: 16px;
+          text-align: center;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+        }
+        .logo{
+          width: 100%;
+          height: 100%;
+          background: #2b343c;
+          border-radius: 50%;
+          font-size: 24px;
+          color: #80858a;
+          line-height: 44px;
+          font-weight: 700;
+          &.active{
+            background: #00a0dc;
+            color: #fff;
+          }
+        }
+      }
+      .price{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        margin-top: 12px;
+        padding-right: 12px;
+        box-sizing: border-box;
+        color: rgba(255,255,255,0.4);
+        font-weight: 700;
+        line-height: 24px;
+        border-right: 1px solid rgba(255,255,255,0.1);
+        &.active{
+          color: #fff
+        }
+      }
+      .desc{
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: 12px 0 0 12px;
+        line-height: 24px;
+        font-weight: 700;
+        color: rgba(255,255,255,0.4);
+        font-size: 10px;
+      }
+    }
+    .content-right{
+      flex: 0 0 105px;  /*又见flex布局*/
+      line-height: 48px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #2b343c;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      &.enough{
+        background: #00b43c;
+        color: #fff;
+      }
+    }
+  }
+  .ball-container{
+    .ball{
+      position: fixed;
+      left: 32px;
+      bottom: 22px;
+      z-index: 200;
+      &.drop-enter,&.drop-enter-active{
+        transition: all 0.4s cubic-bezier(0.49,-0.29,0.75,0.41); /*贝塞尔曲线,一开始速度很快，后来很慢*/
+        .inner{
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: rgb(0,160,220);
+          transition: all 0.4s linear;
+        }
+      }
+    }
+  }
+  .shopCart-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: -1;
+    transform: translate3d(0,-100%,0); /* 注意！！*/
+    &.transHeight-enter-active,&.transHeight-leave-active{   /*动画*/
+      transition: all 0.5s
+    }
+    &.transHeight-enter,&.transHeight-leave-active{
+      transform: translate3d(0,0,0);
+    }
+    .list-header {
+      height: 40px;
+      line-height: 40px;
+      background: #f3f5f7;
+      border-bottom: 1px solid rgba(7,17,27,0.1);
+      .title{
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 200;
+        color: #07111b;
+        padding-left: 18px;
+      }
+      .empty{
+        position: absolute;
+        right: 8px;
+        padding: 0 10px;
+        color: #00a0dc;
+        font-size: 12px;
+      }
+    }
+    .list-content{
+      max-height: 217px;;
+      overflow: hidden;
+      .food{
+        position: relative;
+        display: flex;
+        height: 48px;
+        margin: 0 18px;
+        border-bottom: 1px solid rgba(7,17,27,0.1);
+        .name{
+          flex:1;
+          line-height: 48px;
+          font-weight: 700;
+          color: #07111b;
+          font-size: 14px;
+        }
+        .price{
+          padding: 0 12px 0 18px;
+          line-height: 48px;
+          font-size: 14px;
+          font-weight: 700;
+          color: #f01414;
+        }
+        .cartcontrol-wrapper {
+          font-size: 14px;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
